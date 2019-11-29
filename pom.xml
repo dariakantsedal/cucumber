@@ -13,7 +13,7 @@
   <url>http://www.example.com</url>
 
   <properties>
-
+			<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <ta.cucumber.runner.version>1.0.0-RELEASE</ta.cucumber.runner.version>
 
   </properties>
