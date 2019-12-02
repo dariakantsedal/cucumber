@@ -5,6 +5,5 @@
 Fonctionnalité: Connexion utilisateur
   Scénario: Vérifier qu'un utilisateur peut se connecter
 		Etant donné que je suis un utilisateur de Jpetstore
-		Et que je me connecte sur 
 		Quand je me connecte
 		Alors je vois la page "Welcome"
