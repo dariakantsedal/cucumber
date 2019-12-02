@@ -50,7 +50,7 @@ public class CalculationSteps {
 	@Then("for each {int} its {double} is a proper one")
 	public void for_each_its_is_a_proper_one(Integer quantity, Double double1) {
 	  Assert.assertEquals("prices are not the same", quantity*prix, double1, 0.1);
-	 
+	 driver.close();
 	}
 
 

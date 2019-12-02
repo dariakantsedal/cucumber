@@ -45,6 +45,7 @@ public class ConnexionSteps {
 	public void je_vois_la_page() {
 		WebElement welcome = driver.findElement(By.id("WelcomeContent"));
 		assertEquals(welcome.getText(),"Welcome ABC!");
+		driver.close();
 	}
 	
 }
