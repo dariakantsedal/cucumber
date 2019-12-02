@@ -13,7 +13,7 @@ import cucumber.api.java.fr.Alors;
 import cucumber.api.java.fr.Etantdonnéque;
 import cucumber.api.java.fr.Quand;
 
-public class AnnotationSteps {
+public class ConnexionSteps {
 	static String login;
 	static String password;
 	WebDriver driver;
