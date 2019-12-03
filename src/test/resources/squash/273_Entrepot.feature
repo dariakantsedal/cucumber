@@ -22,7 +22,7 @@ Feature: Entrepot de données Personne
     Then Jobtiens la Personne didentifiant <id> contenant les donnees <prenom>, <nom>, <naissance>
  
     Examples:
-      | id | prenom | nom         | naissance |
+      | id | name | surname         | age |
       | 1  | Anakin | Skywalker   | 41.9 BBY  |
       | 2  | Luke   | Skywalker   | 19 BBY    |
       | 3  | Leia   | Organa Solo | 19 BBY    |
@@ -30,11 +30,11 @@ Feature: Entrepot de données Personne
 
   Scenario Outline: Modification
     Given Lentrepot contient les Personnes suivantes
-      | id | prenom | nom         | naissance |
+      | id | name | surname         | age |
       | 3  | Leia   | Organa Solo | 19 BBY    |
    When Je modifie la Personne <id> avec <nom>
     Then Jobtiens la Personne didentifiant <id> contenant les donnees <prenom>, <nom>, <naissance>
  
     Examples:
-     | id | prenom | nom                   | naissance |
+     | id | name | surname                   | age |
      | 3  | Leia   | Organa Solo Skywalker | 19 BBY    |
