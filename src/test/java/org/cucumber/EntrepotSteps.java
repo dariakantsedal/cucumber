@@ -66,37 +66,57 @@ public class EntrepotSteps {
 
 	@When("Je recupere la Personne {int}")
 	public void je_recupere_la_Personne(Integer int1) {
-		entreprise = new ArrayList<Person>();
-		Person person = new Person(int1);
-		entreprise.add(person);
+
 		int index;
+		System.out.println("INDEX ID : " + int1);
 		switch (int1) {
-		case 1:
-			index = entreprise.indexOf(person);
-			entreprise.get(index).age = "41.9 BBY";
-			entreprise.get(index).name = "Anakin";
-			entreprise.get(index).surname = "Skywalker";
-		case 2:
-			index = entreprise.indexOf(person);
-			entreprise.get(index).age = "19 BBY";
-			entreprise.get(index).name = "Luke";
-			entreprise.get(index).surname = "Skywalker";
-		case 3:
-			index = entreprise.indexOf(person);
-			entreprise.get(index).age = "19 BBY";
-			entreprise.get(index).name = "Leia";
-			entreprise.get(index).surname = "Organa Solo";
+		case 1: {
+			for (Person person : entreprise) {
+				if (person.id == 1) {
+					index = entreprise.indexOf(person);
+					entreprise.get(index).age = "41.9 BBY";
+					entreprise.get(index).name = "Anakin";
+					entreprise.get(index).surname = "Skywalker";
+					System.out.println("@WHEN je rajoutr anakin, index: " + index);
+				}
+			}
 		}
+
+		case 2: {
+			for (Person person : entreprise) {
+				if (person.id == 2) {
+
+					index = entreprise.indexOf(person);
+					entreprise.get(index).age = "19 BBY";
+					entreprise.get(index).name = "Luke";
+					entreprise.get(index).surname = "Skywalker";
+					System.out.println("@WHEN je rajoutr luke, index: " + index);
+				}
+			}
+		}
+		case 3: {
+			for (Person person : entreprise) {
+				if (person.id == 3) {
+					index = entreprise.indexOf(person);
+					entreprise.get(index).age = "19 BBY";
+					entreprise.get(index).name = "Leia";
+					entreprise.get(index).surname = "Organa Solo";
+					System.out.println("@WHEN je rajoutr Leia, index: " + index);
+				}
+			}
+		}
+		}
+
 	}
 
-	@Then("Jobtiens la Personne didentifiant {int} contenant les donnees {string}, {string}, {int}")
+	@Then("Jobtiens la Personne didentifiant {int} contenant les donnees {}, {}, {}")
 	public void jobtiens_la_Personne_didentifiant_contenant_les_donnees(Integer id, String name, String surname,
 			String age) {
 		for (Person person : entreprise) {
-			if (person.id == id) {
-				Assert.assertEquals(person.age, age);
-				Assert.assertEquals(person.name, name);
-				Assert.assertEquals(person.surname, surname);
+			if (id == person.id) {
+				Assert.assertEquals(age, person.age);
+				Assert.assertEquals(name, person.name);
+				Assert.assertEquals(surname, person.surname);
 
 			}
 		}
@@ -104,21 +124,22 @@ public class EntrepotSteps {
 
 	@Given("Lentrepot contient les Personnes suivantes")
 	public void lentrepot_contient_les_Personnes_suivantes(DataTable dt) {
-		//System.out.println(list.height());
-	//	System.out.println(list.toString());
-		//entreprise.add(new Person(list.cell(0, column)))
+		// System.out.println(list.height());
+		// System.out.println(list.toString());
+		// entreprise.add(new Person(list.cell(0, column)))
 		entreprise = new ArrayList<Person>();
 		List<Map<String, String>> list = dt.asMaps(String.class, String.class);
-		for(int i=0; i<list.size(); i++) {
+		for (int i = 0; i < list.size(); i++) {
 			System.out.println(list.get(i).get("id"));
 			System.out.println(list.get(i).get("name"));
 			System.out.println(list.get(i).get("surname"));
 			System.out.println(list.get(i).get("age"));
-		
-			Person person = new Person(Integer.parseInt(list.get(i).get("id")),list.get(i).get("name"),list.get(i).get("surname"),list.get(i).get("age"));
-			
+
+			Person person = new Person(Integer.parseInt(list.get(i).get("id")), list.get(i).get("name"),
+					list.get(i).get("surname"), list.get(i).get("age"));
+
 			entreprise.add(person);
-	}
+		}
 	}
 
 	@When("Je modifie la Personne {int} avec {}")
