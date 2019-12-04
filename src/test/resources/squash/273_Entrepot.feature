@@ -23,18 +23,18 @@ Feature: Entrepot de données Personne
  
     Examples:
       | id | name | surname         | age |
-      | 1  | Anakin | Skywalker   | "41.9BBY"  |
-      | 2  | Luke   | Skywalker   | "19BBY"    |
-      | 3  | Leia   | Organa Solo | "19BBY"    |
+      | 1  | "Anakin" | "Skywalker"   | "41.9BBY"  |
+      | 2  | "Luke"   | "Skywalker"   | "19BBY"    |
+      | 3  | "Leia"   | "Organa Solo" | "19BBY"    |
  
 
   Scenario Outline: Modification
     Given Lentrepot contient les Personnes suivantes
       | id | name | surname         | age |
-      | 3  | Leia   | Organa Solo | "19BBY"    |
+      | 3  | "Leia"   | "Organa Solo" | "19BBY"    |
    When Je modifie la Personne <id> avec <name>
     Then Jobtiens la Personne didentifiant <id> contenant les donnees <name>, <surname>, <age>
  
     Examples:
      | id | name | surname                   | age |
-     | 3  | Leia   | Organa Solo Skywalker | "19BBY"    |
+     | 3  | "Leia"   | "Organa Solo Skywalker" | "19BBY"    |
