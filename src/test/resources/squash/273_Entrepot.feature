@@ -19,7 +19,7 @@ Feature: Entrepot de données Personne
   Scenario Outline: Lecture
     Given Lentrepot contient N Personnes
     When Je recupere la Personne <id>
-    Then Jobtiens la Personne didentifiant <id> contenant les donnees <prenom>, <nom>, <naissance>
+    Then Jobtiens la Personne didentifiant <id> contenant les donnees <name>, <surname>, <age>
  
     Examples:
       | id | name | surname         | age |
@@ -32,8 +32,8 @@ Feature: Entrepot de données Personne
     Given Lentrepot contient les Personnes suivantes
       | id | name | surname         | age |
       | 3  | Leia   | Organa Solo | 19 BBY    |
-   When Je modifie la Personne <id> avec <nom>
-    Then Jobtiens la Personne didentifiant <id> contenant les donnees <prenom>, <nom>, <naissance>
+   When Je modifie la Personne <id> avec <name>
+    Then Jobtiens la Personne didentifiant <id> contenant les donnees <name>, <surname>, <age>
  
     Examples:
      | id | name | surname                   | age |
