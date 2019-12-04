@@ -9,13 +9,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-import io.cucumber.java.fr.Alors;
-import io.cucumber.java.fr.Etantdonnéque;
-import io.cucumber.java.fr.Quand;
+//import io.cucumber.java.fr.Alors;
+//import io.cucumber.java.fr.Etantdonnéque;
+//import io.cucumber.java.fr.Quand;
 
-//import cucumber.api.java.fr.Alors;
-//import cucumber.api.java.fr.Etantdonnéque;
-//import cucumber.api.java.fr.Quand;
+import cucumber.api.java.fr.Alors;
+import cucumber.api.java.fr.Etantdonnéque;
+import cucumber.api.java.fr.Quand;
 
 public class ConnexionSteps {
 	static String login;
