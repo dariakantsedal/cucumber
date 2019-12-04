@@ -89,7 +89,7 @@ public class EntrepotSteps {
 		}
 	}
 
-	@Then("Jobtiens la Personne didentifiant {int} contenant les donnees {string}, {string}, {string}")
+	@Then("Jobtiens la Personne didentifiant {int} contenant les donnees {string}, {string}, {int}")
 	public void jobtiens_la_Personne_didentifiant_contenant_les_donnees(Integer id, String name, String surname,
 			String age) {
 		for (Person person : entreprise) {
@@ -121,7 +121,7 @@ public class EntrepotSteps {
 	}
 	}
 
-	@When("Je modifie la Personne {int} avec {string}")
+	@When("Je modifie la Personne {int} avec {}")
 	public void je_modifie_la_Personne_avec_Organa_Solo_Skywalker(Integer id, String surname) {
 		for (Person person : entreprise) {
 			if (person.id == id) {

@@ -9,6 +9,6 @@ import io.cucumber.junit.CucumberOptions;
 //import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(glue={"resources", "squash"})
+@CucumberOptions(glue={"resources","squash"})
 public class RunTest {
  }
