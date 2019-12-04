@@ -32,7 +32,7 @@ Feature: Entrepot de données Personne
     Given Lentrepot contient les Personnes suivantes
       | id | name | surname         | age |
       | 3  | Leia   | Organa Solo | 19 BBY    |
-   When Je modifie la Personne <id> avec <name>
+   When Je modifie la Personne <id> avec <surname>
     Then Jobtiens la Personne didentifiant <id> contenant les donnees <name>, <surname>, <age>
  
     Examples:
