@@ -21,7 +21,7 @@ public class EntrepotSteps {
 	List<Person> entreprise;
 	int id_new_person = 4;
 
-	@Given("^Lentrepot contient N Personnes$")
+	@Given("^Lentrepot contient (?:.*) Personnes")
 	public void lentrepot_contient_N_Personnes() {
 		Person one = new Person(1);
 		Person two = new Person(2);
