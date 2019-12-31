@@ -13,7 +13,7 @@ Feature: Search by keyword
 
  
  Scenario Outline: Searching for an existing product
-    Given Not logged in user is on the home page
+    Given Not logged in user is on the home page.
     When he searches for <item>
     Then there is an empty table
      Examples:
