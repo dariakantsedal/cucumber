@@ -26,7 +26,7 @@ public class RechercheSteps {
 	WebDriver driver;
 @Given("Not logged in user is on the home page.")
 public void not_logged_in_user_is_on_the_home_page() {
-	System.setProperty("webdriver.gecko.driver", "src/test/resources/squash/geckodriver.exe");
+	//System.setProperty("webdriver.gecko.driver", "src/test/resources/squash/geckodriver.exe");
 	driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	//navigation
