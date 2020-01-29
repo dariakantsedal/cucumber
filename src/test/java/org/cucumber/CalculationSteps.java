@@ -32,7 +32,7 @@ public class CalculationSteps {
 	
 	@Given("I add to cart a Large Angelfish")
 	public void i_add_to_cart_a_Large_Angelfish() {
-		System.setProperty("webdriver.gecko.driver", "src/test/resources/squash/geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "src/test/resources/squash/geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//navigation
