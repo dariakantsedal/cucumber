@@ -18,7 +18,7 @@ public class ContextSteps {
 	      if (!initialized) {
 	         // initialize the driver
 	    	 
-	    	  System.setProperty("webdriver.gecko.driver", "src/test/resources/squash/geckodriver.exe");
+	    	//  System.setProperty("webdriver.gecko.driver", "src/test/resources/squash/geckodriver.exe");
 	         driver = new FirefoxDriver();
 	         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	         initialized = false;
