@@ -31,7 +31,8 @@ public class ConnexionSteps {
 	@Quand("je me connecte")
 	public void je_me_connecte() {
 		//System.setProperty("webdriver.gecko.driver", "src/test/resources/squash/geckodriver.exe");
-		driver = new FirefoxDriver();
+		//driver = new FirefoxDriver();
+		driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		//navigation
 		driver.get("https://petstore.octoperf.com/");
